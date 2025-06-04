@@ -1,0 +1,1360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+:root {
+    --bg-color: #fff;
+    --snd-bg-color: #fff;
+    --text-color: #000;
+    --snd-text-color: #000;
+    --main-color: #ffae00;
+    --snd-color: #ffa000;
+}
+
+html {
+    font-size: 75%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 10% 2.5rem;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem 5%;
+    background: rgba(0, 255, 15, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 1s ease;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 1000;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 5rem;
+    transition: all 1s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 500;
+    border: 2px solid var(--main-color);
+    border-radius: 1rem;
+}
+
+.nav-btn:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--main-color);
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-content h3 {
+    font-size: 5rem;
+    font-weight: 750;
+}
+
+.home-content span {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.home-img img {
+    width: 50vw;
+    border-radius: 1rem;
+}
+
+.home-img:hover {
+    transform: scale(1.01);
+    transition: all 0.5s ease;
+}
+
+.home-content p {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    box-shadow: none;
+    font-size: 1.5rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    color: var(--text-color);
+    box-shadow: 0 0 1.5rem var(--main-color);
+}
+
+.services {
+    background: var(--snd-bg-color);
+}
+
+.heading {
+    text-align: center;
+    font-size: 6rem;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.row {
+    background: rgba(0, 255, 15, 0.5);
+    border-radius: 25px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 25px;
+    transition: all 0.5 ease;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.row img {
+    height: 150px;
+    width: 150px;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+}
+
+.row h4 {
+    font-size: 25px;
+    font-weight: 750;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    margin-top: auto;
+}
+
+.row:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.05);
+    cursor: pointer;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-img img {
+    width: 40vw;
+    border: 2px solid var(--text-color);
+    border-radius: 2rem;
+}
+
+.about-img:hover {
+    transform: scale(1.01);
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
+    transition: all 0.5s ease;
+}
+
+.about-content .heading {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.about-content {
+    padding: 1rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.25;
+}
+
+.about-content p {
+    font-size: 1.75rem;
+    margin: 2rem 0 2rem;
+}
+
+.review {
+    background: var(--bg-color);
+}
+
+.review-box {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.review .heading {
+    margin-bottom: 5rem;
+}
+
+.review-box img {
+    width: 15rem;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.review-item {
+    min-height: 250px;
+    min-width: 250px;
+    background: rgba(0, 255, 15, 0.5);
+    border-radius: 2.5rem;
+    margin: 0 2.5rem;
+    padding: 50px 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: 0.5s ease-in-out;
+    color: #000;
+    border: 3px solid #000;
+}
+
+.review-item:hover {
+    border: 3px solid var(--main-color);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.review-item h2 {
+    font-size: 2.5rem;
+}
+
+.review-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#star {
+    color: #ffa000;
+    font-size: 2.5rem;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 255, 15, 0.5);
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--main-color);
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.footer .social a:hover {
+    transform: scale(1.1) translateY(-10px);
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.footer .copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    width: 25px;
+}
+
+/* Nutrition Meter Styles */
+.nutrition-meter {
+    padding-top: 8rem;
+}
+
+.nutrition-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nutrition-tracking {
+    background: rgba(0, 255, 15, 0.1);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-tracking h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.nutrition-input {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nutrition-input input {
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    flex: 1;
+}
+
+.nutrition-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-box {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.meal-planner {
+    background: rgba(0, 255, 15, 0.1);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.meal-planner h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.meal-slots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.meal-slot {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.meal-slot h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.meal-items {
+    list-style: none;
+}
+
+.meal-items li {
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .nutrition-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meal-slots {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-input {
+        flex-direction: column;
+    }
+}
+
+/* Wellness Hub Styles */
+.wellness-hub {
+    padding-top: 8rem;
+}
+
+.wellness-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meditation-section,
+.mood-tracker,
+.wellness-tips {
+    background: rgba(0, 255, 15, 0.1);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.meditation-section h3,
+.mood-tracker h3,
+.wellness-tips h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.meditation-timer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.meditation-sessions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.session-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.session-card h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.session-card p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.mood-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mood-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.mood-btn {
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mood-btn:hover {
+    transform: scale(1.2);
+}
+
+.mood-input textarea {
+    width: 100%;
+    height: 100px;
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    resize: none;
+}
+
+.mood-history {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.mood-history h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.mood-chart {
+    height: 200px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.tip-card h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.tip-card p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+
+    .meditation-sessions,
+    .tips-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mood-selector {
+        flex-wrap: wrap;
+    }
+}
+
+/* Fitness Zone Styles */
+.fitness-zone {
+    padding-top: 8rem;
+}
+
+.fitness-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.workout-tracker,
+.exercise-library,
+.workout-planner {
+    background: rgba(0, 255, 15, 0.1);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-tracker h3,
+.exercise-library h3,
+.workout-planner h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.workout-input {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.workout-input select,
+.workout-input input {
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    flex: 1;
+}
+
+.workout-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.exercise-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.category-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-card i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.category-card h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.category-card ul {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.category-card li {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.weekly-plan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.day-plan {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.day-plan h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.workout-list {
+    list-style: none;
+}
+
+.workout-list li {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+
+    .workout-stats,
+    .exercise-categories,
+    .weekly-plan {
+        grid-template-columns: 1fr;
+    }
+
+    .workout-input {
+        flex-direction: column;
+    }
+}
+
+/* Sleep Cycle Styles */
+.sleep-cycle {
+    padding-top: 8rem;
+}
+
+.sleep-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sleep-tracker,
+.sleep-analysis,
+.sleep-tips {
+    background: rgba(0, 255, 15, 0.1);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sleep-tracker h3,
+.sleep-analysis h3,
+.sleep-tips h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.sleep-input {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: flex-end;
+}
+
+.time-input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.time-input label {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.time-input input {
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+.sleep-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.sleep-chart {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    min-height: 300px;
+}
+
+.chart-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--main-color);
+}
+
+.chart-placeholder i {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.chart-placeholder p {
+    font-size: 1.6rem;
+}
+
+.sleep-insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.insight-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.insight-card i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.insight-card h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.insight-card p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+
+    .sleep-stats,
+    .sleep-insights {
+        grid-template-columns: 1fr;
+    }
+
+    .sleep-input {
+        flex-direction: column;
+    }
+}
+
+/* Gym Connect Styles */
+.gym-connect {
+    padding-top: 8rem;
+}
+
+.gym-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gym-finder,
+.workout-buddies,
+.gym-challenges {
+    background: rgba(0, 255, 15, 0.1);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gym-finder h3,
+.workout-buddies h3,
+.gym-challenges h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+.gym-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.gym-card {
+    background: var(--bg-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.gym-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gym-info {
+    padding: 1.5rem;
+}
+
+.gym-info h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.gym-info p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.gym-info i {
+    color: var(--main-color);
+    margin-right: 0.5rem;
+}
+
+.buddy-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.buddy-filters select {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+.buddy-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.buddy-card {
+    background: var(--bg-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.buddy-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.buddy-info {
+    flex: 1;
+}
+
+.buddy-info h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.buddy-info p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.challenge-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-card i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.challenge-card h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.challenge-card p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background: rgba(0, 0, 0, 0.1);
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.progress {
+    background: var(--main-color);
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .gym-list,
+    .buddy-list,
+    .challenges-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box,
+    .buddy-filters {
+        flex-direction: column;
+    }
+
+    .buddy-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Consult Expert Styles */
+.consult-expert {
+    padding-top: 8rem;
+}
+
+.consult-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.expert-finder,
+.appointment-scheduler,
+.consultation-history {
+    background: rgba(0, 255, 15, 0.1);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.expert-finder h3,
+.appointment-scheduler h3,
+.consultation-history h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.search-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-filters select {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+.expert-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.expert-card {
+    background: var(--bg-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.expert-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.expert-info {
+    padding: 1.5rem;
+}
+
+.expert-info h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.expert-info p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.rating i {
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+
+.rating span {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.scheduler-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.calendar {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-header h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.time-slots {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.time-slots h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.time-slot {
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 0.5rem;
+    background: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-slot:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+.history-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.history-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.history-header h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.history-header .date {
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+
+.consultation-type {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.consultation-notes {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+
+    .expert-list,
+    .scheduler-container,
+    .history-list {
+        grid-template-columns: 1fr;
+    }
+
+    .search-filters {
+        flex-direction: column;
+    }
+
+    .slots-grid {
+        grid-template-columns: 1fr;
+    }
+}
